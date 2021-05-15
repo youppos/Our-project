@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Demo {
     public static void main(String[] args) {
-        Scanner input=new Scanner(System.in);
         String ip="localhost";
+        Scanner input=new Scanner(System.in);
         Register register1 = new Register();
         System.out.println("注册");
         System.out.print("输入账号：");
@@ -27,5 +27,6 @@ public class Demo {
         login1.setPassword(password2);
         HandleLogin handleLogin1=new HandleLogin(ip);
         handleLogin1.verify(login1);
+        //这是一个更新的标记！！！
     }
 }
