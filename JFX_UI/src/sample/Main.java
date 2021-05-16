@@ -4,8 +4,11 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class Main extends Application {
     //define your offsets here
@@ -33,8 +36,8 @@ public class Main extends Application {
         //set transparent
         scene.setFill(Color.TRANSPARENT);
         primaryStage.setScene(scene);
-        primaryStage.setHeight(800);
-        primaryStage.setWidth(1000);
+        primaryStage.setHeight(900);
+        primaryStage.setWidth(1100);
         primaryStage.show();
 
 
@@ -44,5 +47,18 @@ public class Main extends Application {
     public static void main(String[] args) {
 
         launch(args);
+    }
+
+    public AnchorPane initTestPane() {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("test.fxml"));
+            AnchorPane root = loader.load();
+            return root;
+
+        }catch (IOException e){
+            e.printStackTrace();
+            return  null;
+        }
     }
 }

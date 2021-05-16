@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="755.0" prefWidth="916.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox prefHeight="796.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="159.0" prefWidth="900.0">
+                    <children>
+                        <Pane prefHeight="108.0" prefWidth="740.0">
+                            <children>
+                                <Label layoutX="75.0" layoutY="40.0" prefHeight="29.0" prefWidth="104.0" text="身份证号码：" />
+                                <TextField layoutX="163.0" layoutY="40.0" />
+                                <TextField layoutX="442.0" layoutY="40.0" prefHeight="30.0" prefWidth="116.0" />
+                                <Label layoutX="387.0" layoutY="40.0" prefHeight="29.0" prefWidth="55.0" text="姓名：" />
+                                <Button layoutX="598.0" layoutY="40.0" mnemonicParsing="false" text="查询" />
+                            </children>
+                        </Pane>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="10.0" prefHeight="346.0" prefWidth="900.0">
+                    <children>
+                        <TableView fx:id="bookTypeManageTableView" prefHeight="346.0" prefWidth="898.0" tableMenuButtonVisible="true">
+                            <columns>
+                                <TableColumn fx:id="idTableColumn" prefWidth="224.0" text="身份证号码" />
+                                <TableColumn fx:id="bookTypeNameColumn" minWidth="0.0" prefWidth="93.0" text="姓名" />
+                                <TableColumn fx:id="bookTypeDescriptionTableColumn" prefWidth="69.0" text="性别" />
+                                <TableColumn fx:id="bookTypeDescriptionTableColumn1" prefWidth="158.0" text="文化水平" />
+                                <TableColumn fx:id="bookTypeNameColumn1" minWidth="0.0" prefWidth="130.0" text="收入水平" />
+                                <TableColumn fx:id="bookTypeNameColumn11" minWidth="0.0" prefWidth="166.2000732421875" text="重点人群" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="146.0" prefHeight="290.0" prefWidth="900.0">
+                    <children>
+                        <Pane prefHeight="257.0" prefWidth="900.0">
+                            <children>
+                                <Label layoutX="75.0" layoutY="40.0" prefHeight="29.0" prefWidth="104.0" text="身份证号码：" />
+                                <TextField layoutX="163.0" layoutY="40.0" prefHeight="23.0" prefWidth="201.0" />
+                                <TextField layoutX="163.0" layoutY="85.0" prefHeight="23.0" prefWidth="201.0" />
+                                <Label layoutX="100.0" layoutY="82.0" prefHeight="29.0" prefWidth="55.0" text="姓名：" />
+                                <RadioButton layoutX="158.0" layoutY="135.0" mnemonicParsing="false" text="女" />
+                                <RadioButton layoutX="233.0" layoutY="135.0" mnemonicParsing="false" text="男" />
+                                <Label layoutX="100.0" layoutY="128.0" prefHeight="29.0" prefWidth="55.0" text="性别：" />
+                                <ChoiceBox layoutX="533.0" layoutY="85.0" prefWidth="150.0" />
+                                <Label layoutX="450.0" layoutY="85.0" prefHeight="29.0" prefWidth="75.0" text="收入水平：" />
+                                <ChoiceBox layoutX="533.0" layoutY="131.0" prefWidth="150.0" />
+                                <Label layoutX="450.0" layoutY="131.0" prefHeight="29.0" prefWidth="75.0" text="重点人群：" />
+                                <ChoiceBox layoutX="533.0" layoutY="33.0" prefWidth="150.0" />
+                                <Label layoutX="450.0" layoutY="33.0" prefHeight="29.0" prefWidth="75.0" text="文化水平：" />
+                                <Button layoutX="179.0" layoutY="223.0" mnemonicParsing="false" text="添加" />
+                                <Button layoutX="330.0" layoutY="223.0" mnemonicParsing="false" text="删除" />
+                                <Button layoutX="491.0" layoutY="223.0" mnemonicParsing="false" text="修改" />
+                            </children>
+                        </Pane>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
