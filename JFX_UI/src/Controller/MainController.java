@@ -16,7 +16,7 @@ public class MainController {
     public Pane Pane01;
 
     public AnchorPane testPane;
-    public AnchorPane roomsAnchorPane;
+   // public AnchorPane roomsAnchorPane;
 
 
     public void initTestPane(ActionEvent event) throws IOException {
@@ -31,6 +31,13 @@ public class MainController {
     public void initRoomsPane(ActionEvent event) throws IOException {
         AnchorPane pane = new Main().initRoomsPane();
         System.out.println("fff");
+        testPane.getChildren().clear();
+        testPane.getChildren().add(pane);
+
+    }
+    public void initConstructorPane(ActionEvent event) throws IOException {
+        AnchorPane pane = new Main().initConstructorPane();
+        System.out.println("kkk");
         testPane.getChildren().clear();
         testPane.getChildren().add(pane);
 
