@@ -59,6 +59,20 @@ public class Main extends Application {
         }
     }
 
+    public AnchorPane initConstructorPane() {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("Constructor.fxml"));
+            AnchorPane root = loader.load();
+            return root;
+
+        }catch (IOException e){
+            e.printStackTrace();
+
+            return  null;
+        }
+
+    }
 
     public AnchorPane initRoomsPane() {
         try {
@@ -74,6 +88,7 @@ public class Main extends Application {
         }
 
     }
+
 
     public AnchorPane initRankSeachPane() {
         try {

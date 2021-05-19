@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-<AnchorPane fx:id="rankSearchPane" prefHeight="587.0" prefWidth="494.0" xmlns="http://javafx.com/javafx/11.0.2" fx:controller="Controller.RoomsController" xmlns:fx="http://javafx.com/fxml/1">
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="rankSearchPane" prefHeight="587.0" prefWidth="494.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RoomsController">
    <children>
       <Label layoutX="20.0" layoutY="78.0" prefHeight="20.0" prefWidth="107.0" text="租客身份证号：" />
       <Label layoutX="52.0" layoutY="132.0" lineSpacing="20.0" text="租客姓名：" />
@@ -27,7 +28,10 @@
       <TextField layoutX="138.0" layoutY="378.0" prefHeight="30.0" prefWidth="212.0" />
       <TextField layoutX="138.0" layoutY="339.0" prefHeight="30.0" prefWidth="212.0" />
       <TextField layoutX="138.0" layoutY="419.0" prefHeight="30.0" prefWidth="212.0" />
-      <RadioButton layoutX="138.0" layoutY="465.0" mnemonicParsing="false" text="是" />
+      <RadioButton layoutX="138.0" layoutY="465.0" mnemonicParsing="false" text="是">
+         <toggleGroup>
+            <ToggleGroup fx:id="design" />
+         </toggleGroup></RadioButton>
       <RadioButton layoutX="244.0" layoutY="465.0" mnemonicParsing="false" text="否" />
       <Button layoutX="219.0" layoutY="530.0" mnemonicParsing="false" text="查询" />
    </children>

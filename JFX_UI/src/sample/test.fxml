@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="755.0" prefWidth="916.0" xmlns="http://javafx.com/javafx/11.0.2" fx:id="testPane" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="755.0" prefWidth="916.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TestController">
     <children>
         <VBox prefHeight="796.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -22,7 +22,7 @@
                 </HBox>
                 <HBox layoutX="10.0" layoutY="10.0" prefHeight="346.0" prefWidth="900.0">
                     <children>
-                        <TableView fx:id="bookTypeManageTableView" prefHeight="346.0" prefWidth="898.0" tableMenuButtonVisible="true">
+                        <TableView fx:id="bookTypeManageTableView" prefHeight="333.0" prefWidth="917.0" tableMenuButtonVisible="true">
                             <columns>
                                 <TableColumn fx:id="idTableColumn" prefWidth="224.0" text="身份证号码" />
                                 <TableColumn fx:id="bookTypeNameColumn" minWidth="0.0" prefWidth="93.0" text="姓名" />
@@ -42,14 +42,17 @@
                                 <TextField layoutX="163.0" layoutY="40.0" prefHeight="23.0" prefWidth="201.0" />
                                 <TextField layoutX="163.0" layoutY="85.0" prefHeight="23.0" prefWidth="201.0" />
                                 <Label layoutX="100.0" layoutY="82.0" prefHeight="29.0" prefWidth="55.0" text="姓名：" />
-                                <RadioButton layoutX="158.0" layoutY="135.0" mnemonicParsing="false" text="女" />
-                                <RadioButton layoutX="233.0" layoutY="135.0" mnemonicParsing="false" text="男" />
+                                <RadioButton layoutX="158.0" layoutY="135.0" mnemonicParsing="false" text="女">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="sex" />
+                           </toggleGroup></RadioButton>
+                                <RadioButton layoutX="233.0" layoutY="135.0" mnemonicParsing="false" text="男" toggleGroup="$sex" />
                                 <Label layoutX="100.0" layoutY="128.0" prefHeight="29.0" prefWidth="55.0" text="性别：" />
-                                <ChoiceBox layoutX="533.0" layoutY="85.0" prefWidth="150.0" />
+                                <ChoiceBox fx:id="income" layoutX="533.0" layoutY="85.0" onMousePressed="#income" prefWidth="150.0" />
                                 <Label layoutX="450.0" layoutY="85.0" prefHeight="29.0" prefWidth="75.0" text="收入水平：" />
-                                <ChoiceBox layoutX="533.0" layoutY="131.0" prefWidth="150.0" />
+                                <ChoiceBox fx:id="important" layoutX="533.0" layoutY="131.0" onMousePressed="#important" prefWidth="150.0" />
                                 <Label layoutX="450.0" layoutY="131.0" prefHeight="29.0" prefWidth="75.0" text="重点人群：" />
-                                <ChoiceBox layoutX="533.0" layoutY="33.0" prefWidth="150.0" />
+                                <ChoiceBox fx:id="culture" accessibleText="ee" layoutX="533.0" layoutY="33.0" onMousePressed="#culture" prefWidth="150.0" />
                                 <Label layoutX="450.0" layoutY="33.0" prefHeight="29.0" prefWidth="75.0" text="文化水平：" />
                                 <Button layoutX="179.0" layoutY="223.0" mnemonicParsing="false" text="添加" />
                                 <Button layoutX="330.0" layoutY="223.0" mnemonicParsing="false" text="删除" />
