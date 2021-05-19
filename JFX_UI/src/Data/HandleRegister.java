@@ -9,11 +9,10 @@ public class HandleRegister {
     public HandleRegister(String ip){
         con=GetDBConnection.connectDB(ip);
         if (con==null){
-            System.out.println("连接失败！");
             return;
         }
     }
-    public void writeRegister(Register user){
+    public boolean writeRegister(Register user){
         String sql="insert into user values(?,?,?)";
         int ok=0;
         try{
@@ -28,7 +27,9 @@ public class HandleRegister {
             JOptionPane.showMessageDialog(null,"id不能重复","警告", JOptionPane.WARNING_MESSAGE);
         }
         if (ok!=0){
-            JOptionPane.showMessageDialog(null,"注册成功","恭喜",JOptionPane.INFORMATION_MESSAGE);
+            return true;
+        }else{
+            return false;
         }
     }
 }
