@@ -17,7 +17,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("MainUI.fxml"));
         //primaryStage.initStyle(StageStyle.TRANSPARENT)
 
         //根节点
@@ -36,18 +36,15 @@ public class Main extends Application {
         //set transparent
         scene.setFill(Color.TRANSPARENT);
         primaryStage.setScene(scene);
-        primaryStage.setHeight(900);
-        primaryStage.setWidth(1100);
+        primaryStage.setHeight(800);
+        primaryStage.setWidth(1200);
         primaryStage.show();
 
 
     }
 
 
-    public static void main(String[] args) {
-
-        launch(args);
-    }
+    public static void main(String[] args) { launch(args); }
 
     public AnchorPane initTestPane() {
         try {
@@ -61,4 +58,35 @@ public class Main extends Application {
             return  null;
         }
     }
+
+
+    public AnchorPane initRoomsPane() {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("Rooms.fxml"));
+            AnchorPane root = loader.load();
+            return root;
+
+        }catch (IOException e){
+            e.printStackTrace();
+
+            return  null;
+        }
+
+    }
+
+    public AnchorPane initRankSeachPane() {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("rankSearch.fxml"));
+            AnchorPane root = loader.load();
+            return root;
+
+        }catch (IOException e){
+            e.printStackTrace();
+            return  null;
+        }
+    }
+
+
 }

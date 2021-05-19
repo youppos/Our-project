@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="997.0" style="-fx-background-color: #f6f0f0;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
+   <children>
+      <AnchorPane fx:id="testPane" layoutX="263.0" prefHeight="649.0" prefWidth="823.0" />
+      <AnchorPane layoutX="50.0" prefHeight="649.0" prefWidth="262.0" style="-fx-background-color: #393351;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox layoutY="160.0" prefHeight="356.0" prefWidth="262.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="160.0">
+               <children>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#initTestPane" prefHeight="60.0" prefWidth="262.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="人口基本信息管理" textFill="WHITE">
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="262.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="人口信息统计" textFill="WHITE">
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="70.0" mnemonicParsing="false" onAction="#initRoomsPane" prefHeight="49.0" prefWidth="262.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="租退房管理" textFill="WHITE">
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </VBox>
+            <Pane layoutY="86.0" prefHeight="61.0" prefWidth="262.0" style="-fx-background-color: #FA2C56; -fx-background-radius: 5;">
+               <children>
+                  <Label layoutX="25.0" layoutY="17.0" text="城市流动人口管理系统" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
