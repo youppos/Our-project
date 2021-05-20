@@ -1,7 +1,11 @@
 package Controller;
+import Data.HouseDao;
+import Tools.HouseTools;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Dialog;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
 import sample.Main;
 import sample.SubWin;
@@ -14,9 +18,60 @@ public class RoomsController {
     public AnchorPane roomsAnchorPane;
     public AnchorPane host;
 
-       /* public  void search(){
+    public TableView Tv;
+    public TableColumn Address;
+    public TableColumn Price;
+    public TableColumn Area;
+    public TableColumn Floor;
+    public TableColumn State;
+    public TableColumn Client;
+    public TableColumn ClientId;
+    public TableColumn Decoration;
+    public TableColumn hostName;
+    public TableColumn hostSex;
+    public TableColumn hostId;
+    public TableColumn hostPhone;
 
-        }*/
+
+    private HouseTools tools=new HouseTools();
+    private HouseDao houseDao= new HouseDao();
+
+    public void initialize() {
+        // 查询个人信息的SQL语句
+        String sql=" ";
+        // 填充表格数据，初始化表格视图
+        tools.setHouseTableViewData(Tv,tools.getHouseTableViewData(sql),Address,Price,Area,Floor,State,Client,ClientId,Decoration,hostName,hostSex,hostId,hostPhone);
+
+    }
+
+
+    public void  do_searchButton_event(ActionEvent event){
+         /*// 查询SQL语句String sql = "select bId,bBookName,bAuthor,bSex,bPrice,bBookDescription,btName from tb_book,tb_booktype where" +
+       //                " tb_book.btId=tb_booktype.btId ";*/
+        String sql ="";
+
+        /*// 判断用户是否输入身份证，模糊查询
+        if (!tools.isEmpty(idTextField.getText())) {
+            sql += " and id like '%" + idTextField.getText() + "%'";
+        }
+        // 判断用户是否输入姓名，模糊查询
+        if (!tools.isEmpty(nameTextField.getText())) {
+            sql += " and name like '%" + nameTextField.getText() + "%'";*/
+        // 通过SQL语句查询到的数据重新填充表格，刷新表格显示的数据
+        tools.setHouseTableViewData(Tv,tools.getHouseTableViewData(sql),Address,Price,Area,Floor,State,Client,ClientId,Decoration,hostName,hostSex,hostId,hostPhone);
+
+
+        }
+
+
+
+
+
+
+
+
+
+
 
 
     public void search(ActionEvent event) throws IOException {
@@ -76,3 +131,4 @@ public class RoomsController {
 
 
 }
+
