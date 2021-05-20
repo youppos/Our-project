@@ -17,11 +17,13 @@ import java.sql.*;
             // 加载驱动
             Class.forName("com.mysql.jdbc.Driver");
             // 连接数据库
-            String url = "jdbc:mysql://localhost:3306/db_bookSystem";
+            String url = "jdbc:mysql://localhost:3306/ourproject?useSSL=false" +
+                    "&serverTimezone=GMT&characterEncoding=utf-8" +
+                    "&allowPublicKeyRetrieval=true";;
             // 数据库登录用户名
             String username = "root";
             // 数据库登录密码
-            String password = "admin";
+            String password = "qq123456";
             // 获取数据库连接对象并返回Connection对象
             return DriverManager.getConnection(url, username, password);
         }
