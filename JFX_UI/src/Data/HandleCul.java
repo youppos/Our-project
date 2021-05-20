@@ -6,8 +6,8 @@ public class HandleCul {
     Connection con;
     PreparedStatement preSql;
     ResultSet rs;
-    public HandleCul(String ip){
-        con=GetDBConnection.connectDB(ip);
+    public HandleCul(){
+        con=GetDBConnection.connectDB();
         if(con==null){
             return;
         }

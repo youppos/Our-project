@@ -7,8 +7,8 @@ public class HandleAge {
     Connection con;
     PreparedStatement preSql;
     ResultSet rs;
-    public HandleAge(String ip){
-        con=GetDBConnection.connectDB(ip);
+    public HandleAge(){
+        con=GetDBConnection.connectDB();
         if (con==null){
             return;
         }

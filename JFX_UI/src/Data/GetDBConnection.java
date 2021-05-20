@@ -3,7 +3,7 @@ package Data;
 import java.sql.*;
 
 public class GetDBConnection {
-    public static Connection connectDB(String ip){
+    public static Connection connectDB(){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
         }
@@ -11,7 +11,7 @@ public class GetDBConnection {
 
         }
         Connection con=null;
-        String uri="jdbc:mysql://"+ip+":3306/ourproject?useSSL=false" +
+        String uri="jdbc:mysql://localhost:3306/ourproject?useSSL=false" +
                 "&serverTimezone=GMT&characterEncoding=utf-8" +
                 "&allowPublicKeyRetrieval=true";
         try{

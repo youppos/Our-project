@@ -8,8 +8,8 @@ public class HandleLogin {
     Connection con=null;
     PreparedStatement preSql;
     ResultSet rs;
-    public HandleLogin(String ip){
-        con=GetDBConnection.connectDB(ip);
+    public HandleLogin(){
+        con=GetDBConnection.connectDB();
         if (con==null){
             System.out.println("连接失败！");
             return;

@@ -6,8 +6,8 @@ import java.sql.*;
 public class HandleRegister {
     Connection con=null;
     PreparedStatement preSql;
-    public HandleRegister(String ip){
-        con=GetDBConnection.connectDB(ip);
+    public HandleRegister(){
+        con=GetDBConnection.connectDB();
         if (con==null){
             System.out.println("连接失败！");
             return;

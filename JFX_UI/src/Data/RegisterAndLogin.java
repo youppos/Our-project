@@ -5,10 +5,10 @@ public class RegisterAndLogin {
     Login login;
     HandleRegister hRegister;
     HandleLogin hLogin;
-    RegisterAndLogin(String ip){
+    RegisterAndLogin(){
         register=new Register();
         login=new Login();
-        hRegister=new HandleRegister(ip);
-        hLogin=new HandleLogin(ip);
+        hRegister=new HandleRegister();
+        hLogin=new HandleLogin();
     }
 }

@@ -9,8 +9,8 @@ public class HandleIncome {
     Connection con;
     PreparedStatement preSql;
     ResultSet rs;
-    public HandleIncome(String ip){
-        con=GetDBConnection.connectDB(ip);
+    public HandleIncome(){
+        con=GetDBConnection.connectDB();
         if(con==null){
             return;
         }
