@@ -61,9 +61,10 @@ public class PersonDao {
                 person.setName(rs.getString(2));
                 person.setSex(rs.getString(3));
                 person.setAge(rs.getInt(4));
-                person.setWenhua(rs.getString(5));
-                person.setIncome(rs.getString(6));
-                person.setImportant(rs.getString(7));
+                person.setAdress(rs.getString(5));
+                person.setWenhua(rs.getString(6));
+                person.setIncome(rs.getString(7));
+                person.setImportant(rs.getString(8));
                 list.add(person);
             }
         } catch (Exception e) {

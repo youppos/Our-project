@@ -1,7 +1,8 @@
 package Data;
 
-
+import javax.swing.*;
 import java.sql.*;
+
 
 public class HandleLogin {
     Connection con=null;
@@ -10,11 +11,11 @@ public class HandleLogin {
     public HandleLogin(String ip){
         con=GetDBConnection.connectDB(ip);
         if (con==null){
+            System.out.println("连接失败！");
             return;
         }
     }
-    public boolean verify(Login user){
-        boolean ok=false;
+    public void verify(Login user){
         String id=user.getId();
         String password=user.getPassword();
         String sql="select id,password from user where id=? and password =?";
@@ -23,20 +24,18 @@ public class HandleLogin {
             preSql.setString(1,id);
             preSql.setString(2,password);
             rs=preSql.executeQuery();
-            if(rs.next()){
-                ok=true;
+            if(rs.next()==true){
+                user.setLoginSuccess(true);
+                JOptionPane.showMessageDialog(null,"登陆成功","恭喜",JOptionPane.INFORMATION_MESSAGE);
             }else{
-                ok=false;
+                user.setLoginSuccess(false);
+                JOptionPane.showMessageDialog(null,"登陆失败","登陆失败，请重新登陆",JOptionPane.WARNING_MESSAGE);
             }
             con.close();
         }
         catch(SQLException e){
 
         }
-        if(ok){
-            return true;
-        }else{
-            return false;
-        }
+
     }
 }
