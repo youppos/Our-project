@@ -2,30 +2,34 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+
 <AnchorPane fx:id="roomsAnchorPane" prefHeight="738.0" prefWidth="921.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RoomsController">
    <children>
       <VBox prefHeight="574.0" prefWidth="828.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox alignment="CENTER" prefHeight="99.0" prefWidth="787.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#search" prefHeight="46.0" prefWidth="109.0" text="查询" />
+                  <Button mnemonicParsing="false" onAction="#do_searchButton_event" prefHeight="46.0" prefWidth="109.0" text="查询" />
                </children>
             </HBox>
             <ScrollPane prefHeight="491.0" prefWidth="921.0">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="541.0" prefWidth="968.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="541.0" prefWidth="1644.0">
                      <children>
-                        <TableView layoutX="5.0" prefHeight="561.0" prefWidth="1134.0">
+                        <TableView fx:id="Tv" layoutX="5.0" prefHeight="561.0" prefWidth="1134.0">
                           <columns>
-                            <TableColumn prefWidth="237.0" text="房屋地址" />
-                            <TableColumn minWidth="0.0" prefWidth="72.0" text="价格" />
-                              <TableColumn minWidth="0.0" prefWidth="79.0" text="面积/m^2" />
-                              <TableColumn minWidth="0.0" prefWidth="67.0" text="楼层" />
-                              <TableColumn prefWidth="58.0" text="出租" />
-                              <TableColumn prefWidth="84.0" text="租客" />
-                              <TableColumn prefWidth="215.0" text="租客身份证" />
-                              <TableColumn prefWidth="100.0" text="装修情况" />
-                              <TableColumn prefWidth="69.0" text="房东" />
+                            <TableColumn fx:id="Address" prefWidth="210.0" text="房屋地址" />
+                            <TableColumn fx:id="Price" minWidth="0.0" prefWidth="58.0" text="价格" />
+                              <TableColumn fx:id="Area" minWidth="0.0" prefWidth="81.0" text="面积/m^2" />
+                              <TableColumn fx:id="Floor" minWidth="0.0" prefWidth="49.0" text="楼层" />
+                              <TableColumn fx:id="State" prefWidth="36.0" text="出租" />
+                              <TableColumn fx:id="Client" prefWidth="63.0" text="租客" />
+                              <TableColumn fx:id="ClientId" prefWidth="152.0" text="租客身份证" />
+                              <TableColumn fx:id="Decoration" prefWidth="73.0" text="装修情况" />
+                              <TableColumn fx:id="hostName" prefWidth="74.0" text="房东名字" />
+                              <TableColumn fx:id="hostSex" prefWidth="48.0" text="性别" />
+                              <TableColumn fx:id="hostId" prefWidth="145.0" text="房东身份证号" />
+                              <TableColumn fx:id="hostPhone" prefWidth="127.0" text="房东联系方式" />
                           </columns>
                         </TableView>
                      </children>
@@ -34,10 +38,9 @@
             </ScrollPane>
             <AnchorPane layoutX="10.0" layoutY="109.0" prefHeight="159.0" prefWidth="921.0">
                <children>
-                  <Button layoutX="259.0" layoutY="21.0" mnemonicParsing="false" onAction="#host" prefHeight="39.0" prefWidth="139.0" text="房东信息" />
-                  <Button layoutX="531.0" layoutY="21.0" mnemonicParsing="false" onAction="#rank" prefHeight="39.0" prefWidth="139.0" text="租房" />
-                  <Button layoutX="259.0" layoutY="87.0" mnemonicParsing="false" onAction="#change" prefHeight="39.0" prefWidth="139.0" text="换房" />
-                  <Button layoutX="531.0" layoutY="87.0" mnemonicParsing="false" onAction="#quit" prefHeight="39.0" prefWidth="139.0" text="退房" />
+                  <Button layoutX="154.0" layoutY="48.0" mnemonicParsing="false" onAction="#rank" prefHeight="39.0" prefWidth="139.0" text="租房" />
+                  <Button layoutX="376.0" layoutY="48.0" mnemonicParsing="false" onAction="#change" prefHeight="39.0" prefWidth="139.0" text="换房" />
+                  <Button layoutX="613.0" layoutY="48.0" mnemonicParsing="false" onAction="#quit" prefHeight="39.0" prefWidth="139.0" text="退房" />
                </children>
             </AnchorPane>
          </children>
