@@ -8,21 +8,24 @@ import javafx.beans.property.SimpleStringProperty;
         private SimpleStringProperty id;
         private  SimpleStringProperty name; 
         private  SimpleStringProperty sex;
+        private SimpleStringProperty age;
+        private  SimpleStringProperty adress;
         private SimpleStringProperty wenhua;
         private SimpleStringProperty income;
-        private SimpleStringProperty age;
+
         private SimpleStringProperty important;
 
         public PersonTableData() {}
 
-        public PersonTableData(String bookId, String bookName, String bookAuthor,String bookAuthorSex, String bookPrice, String bookDescription, String bookType) {
-            this.id = new SimpleStringProperty(bookId);
-            this.name = new SimpleStringProperty(bookName);
-            this.sex = new SimpleStringProperty(bookAuthor);
-            this.wenhua = new SimpleStringProperty(bookAuthorSex);
-            this.income = new SimpleStringProperty(bookPrice);
-            this.age = new SimpleStringProperty(bookDescription);
-            this.important = new SimpleStringProperty(bookType);
+        public PersonTableData(String id, String name, String sex,String age, String adress, String wenhua, String income,String important) {
+            this.id = new SimpleStringProperty(id);
+            this.name = new SimpleStringProperty(name);
+            this.sex = new SimpleStringProperty(sex);
+            this.age  = new SimpleStringProperty(age);
+            this.income = new SimpleStringProperty(adress);
+            this.wenhua= new SimpleStringProperty(wenhua);
+            this.income = new SimpleStringProperty(income);
+            this.important = new SimpleStringProperty(important);
         }
 
         public String getId() {
